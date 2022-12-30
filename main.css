@@ -53,7 +53,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
-  width: 40%;
+  width: 60%;
+  padding-bottom: 2em;
 }
 
 .project-links .project-link {
@@ -89,8 +90,6 @@ body {
   background-color: var(--link);
 }
 
-
-
 .project-links a:hover > *:not(.langs) {
   color: var(--bg);
 }
@@ -123,4 +122,37 @@ body {
 
 .c {
   color: var(--c);
+}
+
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    justify-content: flex-start !important;
+  }
+  .project-links {
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .project-links {
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 2em 0;
+  }
+
+  .wrapper h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project-links {
+    grid-template-columns: 1fr !important;
+  }
 }
